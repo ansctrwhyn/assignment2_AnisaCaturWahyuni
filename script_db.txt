@@ -6,7 +6,7 @@ CREATE TABLE portofolio (
     role varchar(100),
     availability enum('Full Time', 'Part Time', 'Internship'),
     age int(11),
-    locks text,
+    lokasi text,
     experience int(11),
     email varchar(100)
 );
