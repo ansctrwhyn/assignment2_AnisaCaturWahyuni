@@ -1,0 +1,12 @@
+CREATE DATABASE data_karyawan;
+
+CREATE TABLE portofolio (
+    id int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT ,
+    name varchar(100),
+    role varchar(100),
+    availability enum('Full Time', 'Part Time', 'Internship'),
+    age int(11),
+    locks text,
+    experience int(11),
+    email varchar(100)
+);
