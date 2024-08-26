@@ -147,60 +147,68 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <form method="POST" action="crud.php">
                 <div class="mb-3">
                     <label for="name" class="form-label fw-bold">Name</label>
-                    <input type="text" class="form-control" id="name" name="name" value="<?php echo isset($_SESSION['valid']['name']) ? htmlspecialchars($_SESSION['valid']['name']) : ''; ?>">
-                    <?php if(isset($_SESSION['errors']['name'])): ?>
+                    <input type="text" class="form-control" id="name" name="name"
+                        value="<?php echo isset($_SESSION['valid']['name']) ? htmlspecialchars($_SESSION['valid']['name']) : ''; ?>">
+                    <?php if (isset($_SESSION['errors']['name'])): ?>
                         <p class="text-danger"><?php echo $_SESSION['errors']['name']; ?></p>
                     <?php endif; ?>
                 </div>
                 <div class="mb-3">
                     <label for="role" class="form-label fw-bold">Role</label>
-                    <input type="text" class="form-control" id="role" name="role" value="<?php echo isset($_SESSION['valid']['role']) ? htmlspecialchars($_SESSION['valid']['role']) : ''; ?>">
-                    <?php if(isset($_SESSION['errors']['role'])): ?>
+                    <input type="text" class="form-control" id="role" name="role"
+                        value="<?php echo isset($_SESSION['valid']['role']) ? htmlspecialchars($_SESSION['valid']['role']) : ''; ?>">
+                    <?php if (isset($_SESSION['errors']['role'])): ?>
                         <p class="text-danger"><?php echo $_SESSION['errors']['role']; ?></p>
-                    <?php endif; ?>                
+                    <?php endif; ?>
                 </div>
                 <div class="mb-3">
                     <label for="availability" class="form-label fw-bold">Availability</label>
-                    <select class="form-select" aria-label="Default select example" name="availability" id="availability">
+                    <select class="form-select" aria-label="Default select example" name="availability"
+                        id="availability">
                         <option value="">Pilih Availability</option>
                         <option value="Full Time" <?php echo (isset($_SESSION['valid']['availability']) && $_SESSION['valid']['availability'] == 'Full Time') ? 'selected' : ''; ?>>Full Time</option>
                         <option value="Part Time" <?php echo (isset($_SESSION['valid']['availability']) && $_SESSION['valid']['availability'] == 'Part Time') ? 'selected' : ''; ?>>Part Time</option>
                         <option value="Internship" <?php echo (isset($_SESSION['valid']['availability']) && $_SESSION['valid']['availability'] == 'Internship') ? 'selected' : ''; ?>>Internship</option>
                     </select>
-                    <?php if(isset($_SESSION['errors']['availability'])): ?>
+                    <?php if (isset($_SESSION['errors']['availability'])): ?>
                         <p class="text-danger"><?php echo $_SESSION['errors']['availability']; ?></p>
-                    <?php endif; ?>  
-                </div>          
+                    <?php endif; ?>
+                </div>
                 <div class="mb-3">
                     <label for="age" class="form-label fw-bold">Age</label>
-                    <input type="number" class="form-control" id="age" name="age" value="<?php echo isset($_SESSION['valid']['age']) ? htmlspecialchars($_SESSION['valid']['age']) : ''; ?>">
-                    <?php if(isset($_SESSION['errors']['age'])): ?>
+                    <input type="text" class="form-control" id="age" name="age"
+                        value="<?php echo isset($_SESSION['valid']['age']) ? htmlspecialchars($_SESSION['valid']['age']) : ''; ?>">
+                    <?php if (isset($_SESSION['errors']['age'])): ?>
                         <p class="text-danger"><?php echo $_SESSION['errors']['age']; ?></p>
-                    <?php endif; ?>                
+                    <?php endif; ?>
                 </div>
                 <div class="mb-3">
                     <label for="location" class="form-label fw-bold">Location</label>
-                    <input type="text" class="form-control" id="lokasi" name="lokasi" value="<?php echo isset($_SESSION['valid']['lokasi']) ? htmlspecialchars($_SESSION['valid']['lokasi']) : ''; ?>">
-                    <?php if(isset($_SESSION['errors']['lokasi'])): ?>
+                    <input type="text" class="form-control" id="lokasi" name="lokasi"
+                        value="<?php echo isset($_SESSION['valid']['lokasi']) ? htmlspecialchars($_SESSION['valid']['lokasi']) : ''; ?>">
+                    <?php if (isset($_SESSION['errors']['lokasi'])): ?>
                         <p class="text-danger"><?php echo $_SESSION['errors']['lokasi']; ?></p>
-                    <?php endif; ?>                
+                    <?php endif; ?>
                 </div>
                 <div class="mb-3">
                     <label for="experience" class="form-label fw-bold">Years Experience</label>
-                    <input type="number" class="form-control" id="experience" name="experience" value="<?php echo isset($_SESSION['valid']['experience']) ? htmlspecialchars($_SESSION['valid']['experience']) : ''; ?>">
-                    <?php if(isset($_SESSION['errors']['experience'])): ?>
+                    <input type="text" class="form-control" id="experience" name="experience"
+                        value="<?php echo isset($_SESSION['valid']['experience']) ? htmlspecialchars($_SESSION['valid']['experience']) : ''; ?>">
+                    <?php if (isset($_SESSION['errors']['experience'])): ?>
                         <p class="text-danger"><?php echo $_SESSION['errors']['experience']; ?></p>
-                    <?php endif; ?>                
+                    <?php endif; ?>
                 </div>
                 <div class="mb-3">
                     <label for="email" class="form-label fw-bold">Email Address</label>
-                    <input type="email" class="form-control" id="email" name="email" value="<?php echo isset($_SESSION['valid']['email']) ? htmlspecialchars($_SESSION['valid']['email']) : ''; ?>">
-                    <?php if(isset($_SESSION['errors']['email'])): ?>
+                    <input type="text" class="form-control" id="email" name="email"
+                        value="<?php echo isset($_SESSION['valid']['email']) ? htmlspecialchars($_SESSION['valid']['email']) : ''; ?>">
+                    <?php if (isset($_SESSION['errors']['email'])): ?>
                         <p class="text-danger"><?php echo $_SESSION['errors']['email']; ?></p>
-                    <?php endif; ?>                
+                    <?php endif; ?>
 
                 </div>
-                <button type="submit" class="btn btn-success mb-2" name="submit-session" style="width: 100%;">Submit</button>
+                <button type="submit" class="btn btn-success mb-2" name="submit-session"
+                    style="width: 100%;">Submit</button>
                 <!-- <button type="submit" class="btn btn-primary" name="submit-cookie" style="width: 100%;">Submit Cookie</button> -->
             </form>
         </div>

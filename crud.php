@@ -74,7 +74,7 @@ function validateInput($data, $type)
             break;
 
         case 'number':
-            if (!is_numeric($data) || $data <= 0) {
+            if (!is_numeric($data) || !filter_var($data, FILTER_VALIDATE_INT) || $data <= 0) {
                 return false;
             }
             break;
@@ -120,7 +120,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $age = validateInput(getPostData('age'), 'number');
     if (!$age) {
-        $errors['age'] = "Umur harus lebih dari 0 tahun!";
+        $errors['age'] = "Umur harus angka dan lebih dari 0 tahun!";
     } else {
         $_SESSION['valid']['age'] = $age;
     }
@@ -134,7 +134,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $experience = validateInput(getPostData('experience'), 'number');
     if (!$experience) {
-        $errors['experience'] = "Years Experience harus lebih dari 0 tahun!";
+        $errors['experience'] = "Years Experience harus angka lebih dari 0 tahun!";
     } else {
         $_SESSION['valid']['experience'] = $experience;
     }
